@@ -97,9 +97,9 @@ fi
 ### =========================
 ### PHP-FPM CONFIG
 ### =========================
-PHPFPM_CONF="$PREFIX/etc/php-fpm.d/www.conf"
-
-sed -i 's|^;listen =.*|listen = 127.0.0.1:9000|' "$PHPFPM_CONF"
+echo "⚙️ Configuring PHP-FPM..."
+sed -i 's|^;listen =.*|listen = 127.0.0.1:9000|' \
+    $PREFIX/etc/php-fpm.d/www.conf
 
 ### =========================
 ### NGINX CONFIG
